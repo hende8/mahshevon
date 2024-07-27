@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%; /* Adjust for larger screens */
+  max-width: 500px; 
+}
+
+.calculator-container-phone {
+  /* Remove this container as it's not needed */
+  /* background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  visibility: collapse; */
+}
+
+@media only screen and (max-width: 430px) {
+  /* No need to hide containers, adjust styling instead */
+  .calculator-container {
+    /* Make adjustments for smaller screens */
+  }
+}
+
+.theme-selector-container {
+  position: absolute; /* Absolute positioning */
+  right: 0; /* Stick to the right */
+  top: 0; /* Place it at the top of the .calculator-container */
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 10;
+}
+
+.theme-selector-container select {
+  border: none;
+  background-color: transparent;
+}
+
+/* Theme styling (default, dark, light) - No changes needed */
+/* ... */
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2em;
+  width: 100%;
+  /* Adjust max-width to be more responsive */
+  max-width: 90%; 
+  padding: 20px;
+}
+
+#result {
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Adjust button width for responsiveness */
+  width: 23%; 
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 430px) {
+  /* Smaller screens (phone) - Adjust calculator size and button widths */
+  .calculator {
+    font-size: 1.5em; /* Reduce font size slightly */
+  }
+
+  button {
+    /* Make buttons wider for better touch interaction */
+    width: 48%; 
+    margin: 5px; /* Reduce button margins */
+  }
+}
+
+@media only screen and (min-width: 431px) {
+  /* Larger screens (desktop) - Adjust for better layout */
+  .calculator {
+    font-size: 2em; /* Maintain original font size */
+  }
+
+  button {
+    /* Maintain original button widths */
+    width: 23%;
+    margin: 10px; /* Maintain original margins */
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  /* Smaller screens (phone) - Adjust calculator size and button widths */
+  .calculator-container {
+    width: 95%; /* Increase width for phone screens */
+    max-width: 400px; /* Set a maximum width to prevent it from getting too large */
+  }
+
+  .calculator {
+    font-size: 1.5em; /* Reduce font size slightly */
+  }
+
+  button {
+    /* Make buttons wider for better touch interaction */
+    width: 48%; 
+    margin: 5px; /* Reduce button margins */
+  }
+}
+
+@media only screen and (min-width: 431px) {
+  /* Larger screens (desktop) - Adjust for better layout */
+  .calculator {
+    font-size: 2em; /* Maintain original font size */
+  }
+
+  button {
+    /* Maintain original button widths */
+    width: 23%;
+    margin: 10px; /* Maintain original margins */
+  }
+}
