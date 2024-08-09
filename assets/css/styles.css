@@ -141,6 +141,10 @@ img {
   font-weight: var(--font-semi);
 }
 @media screen and (max-width: 767px) {
+  .text-block {
+    max-width: 100%;
+    margin: 0; /* ביטול המרכז כדי להתאים למסך מלא */
+  }
   .nav__logo {
     font-size: 1.5rem; /* הגדרת גובה הטקסט למכשירים ניידים */
     /* ניתן לשנות את הערך לפי הצורך */
@@ -714,4 +718,16 @@ button:hover {
 }
 input:focus {
   touch-action: manipulation;
+}
+.text-block {
+  max-width: 65%; /* או ערך מותאם אישית אחר כדי להגביל את רוחב הבלוק */
+  margin: 0 auto; /* מרכז את הבלוק בתוך התצוגה */
+  padding: 10px; /* הוסף רווח פנימי לבלוק */
+  box-sizing: border-box; /* כולל את הרווחים והמסגרות בתוך הרוחב הכולל */
+  text-align: right;
+  direction: rtl;
+}
+
+.text-block h4 {
+  word-wrap: break-word; /* שבירת מילים כדי למנוע שורות ארוכות */
 }
