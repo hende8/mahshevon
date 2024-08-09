@@ -712,3 +712,6 @@ button:hover {
     margin: 10px; /* Maintain original margins */
   }
 }
+input:focus {
+  touch-action: manipulation;
+}
