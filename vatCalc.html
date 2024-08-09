@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="assets/img/iphone.jpeg">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>מחשבונים כחול לבן</title>
+    <title>מחשבון מע"מ</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621434350379137"
     crossorigin="anonymous"></script>
@@ -23,7 +24,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="google" content="mahshevon">
 <meta name="google-site-verification" content="4k9KY4bhDc3-cQbPBFJd5413z7JQHxQbO_awhrgwKV4">
-</head>
+    </head>
 
 <body>
     <header class="l-header">
@@ -46,45 +47,17 @@
     </header>
 
     <main class="l-main">
-        <!-- מחשבון פשוט -->
-        <section class="calc section" id="simpleCalc">
-            <h2 class="section-title">מחשבון כחול לבן</h2>
+        <section class="calc section" id="vatCalc">
+            <h2 class="section-title">מחשבון מע"מ</h2>
             <div class="calculator-container">
-                <div class="calculator">
-                    <div class="calculator-container2">
-                        <input type="text" id="result" />
-                        <div class="row">
-                            <button id="clear">C</button>
-                            <button id="open-paren">(</button>
-                            <button id="close-paren">)</button>
-                            <button id="backspace">del</button>
-                        </div>
-                        <div class="row">
-                            <button id="seven">7</button>
-                            <button id="eight">8</button>
-                            <button id="nine">9</button>
-                            <button id="divide">/</button>
-                        </div>
-                        <div class="row">
-                            <button id="four">4</button>
-                            <button id="five">5</button>
-                            <button id="six">6</button>
-                            <button id="multiply">*</button>
-                        </div>
-                        <div class="row">
-                            <button id="one">1</button>
-                            <button id="two">2</button>
-                            <button id="three">3</button>
-                            <button id="subtract">-</button>
-                        </div>
-                        <div class="row">
-                            <button id="zero">0</button>
-                            <button id="decimal">.</button>
-                            <button id="equals">=</button>
-                            <button id="add">+</button>
-                        </div>
+                <form id="vat-form">
+                    <div class="row">
+                        <input type="number" id="inputMaamNumber" class="contact__input" placeholder="הכנס סכום">
+                        <label for="number" style="padding-left: 30px; font-size: 20px;">סכום לא כולל מע"מ</label>
                     </div>
-                </div>
+                    <button type="button" onclick="calculateVAT()">חשב</button>
+                </form>
+                <div id="resultMaam" class="resultPercent"></div>
             </div>
         </section>
     </main>
@@ -94,7 +67,7 @@
         <p class="footer__copy">&#169; כל הזכויות שמורות</p>
     </footer>
 
-    <script src="assets/js/calculator.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

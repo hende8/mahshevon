@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/iphone.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>מחשבון אינץ' לסנטימטר</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621434350379137"
+        crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-11LZGSQKD4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-11LZGSQKD4');
+    </script>
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="google" content="mahshevon">
+    <meta name="google-site-verification" content="4k9KY4bhDc3-cQbPBFJd5413z7JQHxQbO_awhrgwKV4">
+</head>
+
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">מחשבונים כחול לבן</a>
+            </div>
+            <div class="nav__menu2" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">מחשבון</a></li>
+                    <li class="nav__item"><a href="percentCalc.html" class="nav__link">מחשבון אחוזים</a></li>
+                    <li class="nav__item"><a href="vatCalc.html" class="nav__link">מחשבון מע"מ</a></li>
+                    <li class="nav__item"><a href="inchToCmCalc.html" class="nav__link">אינץ' לסנטימטר</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="calc section" id="inchToCmCalc">
+            <h2 class="section-title">מחשבון אינץ' לסנטימטר</h2>
+            <div class="calculator-container">
+                <form id="inchToCm-form">
+                    <div class="row">
+                        <input type="number" id="inputInches" class="contact__input" placeholder="הכנס אינצ'">
+                        <label for="number" style="padding-left: 30px; font-size: 20px;">מידה באינץ'</label>
+                    </div>
+                    <button type="button" onclick="calculateInchToCm()">חשב</button>
+                </form>
+                <div id="resultInchToCm" class="resultPercent"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__title">מחשבונים כחול לבן</p>
+        <p class="footer__copy">&#169; כל הזכויות שמורות</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

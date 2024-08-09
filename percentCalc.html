@@ -6,7 +6,7 @@
     <link rel="icon" href="assets/img/iphone.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>מחשבונים כחול לבן</title>
+    <title>מחשבון אחוזים</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621434350379137"
     crossorigin="anonymous"></script>
@@ -33,7 +33,10 @@
             </div>
             <div class="nav__menu2" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">מחשבון</a></li>
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">מחשבון
+                        </a>
+                    </li>
                     <li class="nav__item"><a href="percentCalc.html" class="nav__link">מחשבון אחוזים</a></li>
                     <li class="nav__item"><a href="vatCalc.html" class="nav__link">מחשבון מע"מ</a></li>
                     <li class="nav__item"><a href="inchToCmCalc.html" class="nav__link">אינץ' לסנטימטר</a></li>
@@ -46,45 +49,24 @@
     </header>
 
     <main class="l-main">
-        <!-- מחשבון פשוט -->
-        <section class="calc section" id="simpleCalc">
-            <h2 class="section-title">מחשבון כחול לבן</h2>
+        <section class="calc percent section" id="percentCalc">
+            <h2 class="section-title">מחשבון אחוזים</h2>
             <div class="calculator-container">
-                <div class="calculator">
-                    <div class="calculator-container2">
-                        <input type="text" id="result" />
-                        <div class="row">
-                            <button id="clear">C</button>
-                            <button id="open-paren">(</button>
-                            <button id="close-paren">)</button>
-                            <button id="backspace">del</button>
-                        </div>
-                        <div class="row">
-                            <button id="seven">7</button>
-                            <button id="eight">8</button>
-                            <button id="nine">9</button>
-                            <button id="divide">/</button>
-                        </div>
-                        <div class="row">
-                            <button id="four">4</button>
-                            <button id="five">5</button>
-                            <button id="six">6</button>
-                            <button id="multiply">*</button>
-                        </div>
-                        <div class="row">
-                            <button id="one">1</button>
-                            <button id="two">2</button>
-                            <button id="three">3</button>
-                            <button id="subtract">-</button>
-                        </div>
-                        <div class="row">
-                            <button id="zero">0</button>
-                            <button id="decimal">.</button>
-                            <button id="equals">=</button>
-                            <button id="add">+</button>
-                        </div>
+                <form id="percentage-form">
+                    <div class="row">
+                        <input type="number" id="number" class="contact__input" placeholder="הכנס מספר" required>
+                        <label for="number" style="padding-left: 30px; font-size: 22px;">המספר השלם</label>
                     </div>
-                </div>
+                    <div class="row">
+                        <input type="number" id="percent" placeholder="הכנס אחוזים" class="contact__input" required>
+                        <label for="number" style="padding-left: 30px; font-size: 22px;">אחוזים מהמספר</label>
+                    </div>
+                    <button type="button" onclick="calculatePercentage()">חשב</button>
+                </form>
+                <div id="resultPercent" class="resultPercent"></div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
             </div>
         </section>
     </main>
@@ -94,7 +76,7 @@
         <p class="footer__copy">&#169; כל הזכויות שמורות</p>
     </footer>
 
-    <script src="assets/js/calculator.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
