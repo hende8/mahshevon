@@ -28,7 +28,7 @@
 .nav__list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
   display: table-column;
 }
 
@@ -84,7 +84,6 @@ h1, h2, p {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 a {
