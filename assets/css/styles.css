@@ -140,7 +140,31 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+
+ul {
+  list-style-type: disc; /* הצגת נקודות ליד כל פריט */
+  padding-left: 20px; /* הוספת רווח בין הנקודות לטקסט */
+  margin: 0 auto; /* מרכז את ה-ul */
+  max-width: 65%; /* קבע רוחב מקסימלי כמו ב-text-block */
+  padding: 10px; /* רווח פנימי */
+  text-align: right; /* טקסט מיושר לימין */
+  direction: rtl; /* קביעת כיוון מימין לשמאל */
+  padding-inline-start: 0;
+}
+
+li {
+  margin-bottom: 10px; /* הוספת רווח בין הפריטים */
+}
+
 @media screen and (max-width: 767px) {
+  ul {
+    max-width: 100%; /* הרחבת הרשימה ל-100% במסכים קטנים */
+    margin: 0; /* ביטול המרכזת הרשימה במסכים קטנים */
+  }
+
+  li {
+    font-size: var(--normal-font-size); /* התאמת גודל הפונט בפריטים במסכים קטנים */
+  }
   .text-block {
     max-width: 100%;
     margin: 0; /* ביטול המרכז כדי להתאים למסך מלא */
